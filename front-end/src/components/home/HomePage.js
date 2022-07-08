@@ -3,7 +3,7 @@ import "./HomePage.css";
 const HomePage = () => {
   return (
     <>
-      <div></div>
+      <div className="home-bg"></div>
     </>
   );
 };
