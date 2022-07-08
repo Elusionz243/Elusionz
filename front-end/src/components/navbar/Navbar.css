@@ -1,0 +1,91 @@
+@font-face {
+  font-family: spaceranger;
+  src: url("../../utils/fonts/spaceranger.ttf");
+}
+
+.navbar-container {
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+.logo-container {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: spaceranger;
+  color: #fff;
+  font-size: 2.5em;
+  text-decoration: none;
+  margin: 0;
+}
+
+.navbar-links {
+  display: flex;
+  max-width: 90%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar-link {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 1em;
+}
+
+.dropdown-link {
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.dropdown-title {
+  padding: 0;
+  margin: 0 0.5em;
+}
+
+a:active,
+a:hover {
+  color: #fff;
+  border: none;
+}
+
+@media screen and (min-width: 766px) {
+  .navbar-container {
+  }
+
+  .logo-container {
+  }
+
+  .logo {
+  }
+}
+
+@media screen and (min-width: 1022px) {
+  .navbar-container {
+  }
+
+  .logo-container {
+  }
+
+  .logo {
+  }
+}
+
+@media screen and (min-width: 1438px) {
+  .navbar-container {
+  }
+
+  .logo-container {
+  }
+
+  .logo {
+  }
+}
