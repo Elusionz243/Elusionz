@@ -1,0 +1,101 @@
+.about-container {
+  margin: 2%;
+  font-size: 1.1rem;
+  border: 3px solid rgb(150, 150, 150);
+  background: rgb(25, 25, 25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.about-image {
+  width: 300px;
+  height: 450px;
+  border-radius: 5px;
+}
+
+.about-title {
+  color: #fff;
+  margin-bottom: 2.5%;
+}
+
+.about-link {
+  text-decoration: none;
+}
+
+.about-link:hover,
+.about-link:focus {
+  text-decoration: none;
+  color: aqua;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text-container {
+  color: rgb(200, 250, 255);
+  margin-top: 2%;
+}
+
+.skills-list {
+  margin: 0 1%;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill {
+  margin: 15px;
+}
+
+#HTML5,
+#KNEX {
+  color: rgb(255, 100, 0);
+}
+
+#CSS3 {
+  color: rgb(0, 200, 255);
+}
+
+#JS {
+  color: rgb(200, 200, 0);
+}
+
+#REACT {
+  color: rgb(0, 255, 255);
+}
+
+#NODE {
+  color: rgb(0, 255, 100);
+}
+
+#NPM {
+  color: rgb(255, 0, 0);
+}
+
+@media screen and (min-width: 640px) {
+  .skills {
+    justify-content: normal;
+  }
+}
+@media screen and (min-width: 1022px) {
+  .about-container {
+    margin: 2% 10%;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-image {
+    width: 500px;
+    height: 500px;
+    margin-right: 1%;
+  }
+}

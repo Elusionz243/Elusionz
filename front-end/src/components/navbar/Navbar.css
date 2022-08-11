@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5%;
+  padding: 0 2%;
   border-bottom: 1px solid rgb(150, 150, 150);
 }
 
@@ -34,14 +34,15 @@
 }
 
 .navbar-link {
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-decoration: none;
   color: #fff;
   margin: 0 1em;
+  cursor: pointer;
 }
 
 .dropdown-link {
-  font-size: 1.25em;
+  font-size: 1.05em;
   text-decoration: none;
   color: #fff;
 }
@@ -67,8 +68,8 @@ a:hover {
   .navbar-container {
     display: flex;
     flex-direction: row;
-    padding: 2%;
     justify-content: space-between;
+    height: 8vh;
   }
 
   .logo-container {
