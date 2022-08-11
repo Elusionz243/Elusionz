@@ -92,3 +92,10 @@
 .svg {
   margin-right: 5px;
 }
+
+@media screen and (min-width: 1022px) {
+  .project-card {
+    width: 350px;
+    height: 350px;
+  }
+}
