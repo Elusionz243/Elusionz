@@ -1,0 +1,25 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+textarea {
+  margin-bottom: 15px;
+  min-height: 15ch;
+  border-radius: 5px;
+}
+
+button {
+  width: 60%;
+  align-self: center;
+}

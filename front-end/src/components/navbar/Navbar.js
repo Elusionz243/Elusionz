@@ -16,39 +16,11 @@ const Navbar = () => {
         <div className="navbar-link" onClick={() => navigate("/projects")}>
           Projects
         </div>
-        {/* <div className="dropdown">
-          <a
-            className="btn dropdown-toggle navbar-link dropdown-title"
-            href="#"
-            role="button"
-            id="projects"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Projects
-          </a>
-          <ul
-            className="dropdown-menu"
-            style={{ background: "rgb(100, 100, 100)" }}
-            aria-labelledby="projects"
-          >
-            <li>
-              <a className="dropdown-item dropdown-link" href="/projects">
-                All projects
-              </a>
-            </li>
-            <li>
-              <a
-                className="dropdown-item dropdown-link"
-                href="/projects/webdev"
-              >
-                Webdev
-              </a>
-            </li>
-          </ul>
-        </div> */}
-        <div className="navbar-link" onClick={() => navigate("/About")}>
+        <div className="navbar-link" onClick={() => navigate("/about")}>
           About
+        </div>
+        <div className="navbar-link" onClick={() => navigate("/contact")}>
+          Contact
         </div>
       </div>
     </div>
