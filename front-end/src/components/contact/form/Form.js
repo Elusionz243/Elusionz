@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import { init, sendForm } from "@emailjs/browser";
 
 import "./Form.css";
 
-const Form = ({ formData, setFormData }) => {
+const Form = ({ formData, setFormData, setFormStatus }) => {
   useEffect(() => {
     const abortController = new AbortController();
     init("DhXTn4Qp6lvBpmDrO");
@@ -19,33 +19,59 @@ const Form = ({ formData, setFormData }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const contactNumber = document.querySelector("[name=contact_number");
     contactNumber.value = (Math.random() * 100000) | 0;
 
-    sendForm("service_zlo7mor", "template_w5xjr2k", e.target);
+    const response = await sendForm(
+      "service_zlo7mor",
+      "template_w5xjr2k",
+      e.target
+    );
+    setFormStatus((prev) => (prev = response.status));
+    console.log(response.status);
+    setFormData({
+      ...formData,
+      from_name: "",
+      from_email: "",
+      message: "",
+    });
   };
 
   return (
-    <form id="contact-form" onSubmit={handleSubmit}>
-      <input type="hidden" name="contact_number" />
-      <label htmlFor="user_name">Name:</label>
-      <input
-        type="text"
-        id="user_name"
-        name="user_name"
-        onChange={handleChange}
-      />
-      <label htmlFor="email">Email:</label>
-      <input id="email" type="email" name="email" onChange={handleChange} />
-      <label htmlFor="message">Message:</label>
-      <textarea id="message" name="message" onChange={handleChange}></textarea>
-      <button type="submit" className="btn btn-success">
-        Send
-      </button>
-    </form>
+    <div className="form-container">
+      <form id="contact-form" onSubmit={handleSubmit}>
+        <input type="hidden" name="contact_number" />
+        <label htmlFor="from_name">Name:</label>
+        <input
+          type="text"
+          id="from_name"
+          name="from_name"
+          onChange={handleChange}
+          required={true}
+        />
+        <label htmlFor="from_email">Email:</label>
+        <input
+          id="from_email"
+          type="email"
+          name="from_email"
+          onChange={handleChange}
+          required={true}
+        />
+        <label htmlFor="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          onChange={handleChange}
+          required={true}
+        ></textarea>
+        <button type="submit" className="btn btn-success">
+          Send
+        </button>
+      </form>
+    </div>
   );
 };
 

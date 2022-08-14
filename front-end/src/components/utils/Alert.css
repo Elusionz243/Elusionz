@@ -1,0 +1,18 @@
+.alert-container {
+  padding: 2ch;
+  font-weight: 600;
+  font-size: 1.05em;
+  margin-top: 25px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 25px;
+  border: 3px solid rgb(255, 255, 255);
+  color: rgb(25, 25, 25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+}
