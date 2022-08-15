@@ -63,4 +63,8 @@ footer {
   .socials {
     flex-direction: column;
   }
+
+  .social {
+    margin: 5px 0;
+  }
 }

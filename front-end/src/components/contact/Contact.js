@@ -121,6 +121,7 @@ const Contact = () => {
               onClick={social === "Gmail" ? copyEmail : null}
               target={social !== "Gmail" ? "_blank" : ""}
               rel="noreferrer"
+              className="social"
             >
               {socials[social].svg}
               {social === "Gmail" ? (
