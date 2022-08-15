@@ -11,12 +11,14 @@ label {
 input {
   margin-bottom: 5px;
   border-radius: 5px;
+  padding: 5px;
 }
 
 textarea {
   margin-bottom: 15px;
   min-height: 15ch;
   border-radius: 5px;
+  padding: 5px;
 }
 
 button {

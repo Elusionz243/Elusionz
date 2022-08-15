@@ -21,6 +21,7 @@ const Form = ({ formData, setFormData, setFormStatus }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (formData["from_email"] === "jacobhickman243@gmail.com") return;
 
     const contactNumber = document.querySelector("[name=contact_number");
     contactNumber.value = (Math.random() * 100000) | 0;
@@ -51,6 +52,7 @@ const Form = ({ formData, setFormData, setFormStatus }) => {
           name="from_name"
           onChange={handleChange}
           required={true}
+          placeholder="John Doe"
         />
         <label htmlFor="from_email">Email:</label>
         <input
@@ -59,6 +61,7 @@ const Form = ({ formData, setFormData, setFormStatus }) => {
           name="from_email"
           onChange={handleChange}
           required={true}
+          placeholder="johndoe@email.com"
         />
         <label htmlFor="message">Message:</label>
         <textarea
@@ -66,6 +69,7 @@ const Form = ({ formData, setFormData, setFormStatus }) => {
           name="message"
           onChange={handleChange}
           required={true}
+          placeholder="Some message here..."
         ></textarea>
         <button type="submit" className="btn btn-success">
           Send
